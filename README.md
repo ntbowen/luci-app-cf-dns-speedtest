@@ -1,4 +1,4 @@
-# luci-app-cf-dns-speedtest
+# luci-app-cf-dns-speedtest — Cloudflare DNS IP 优选插件
 
 适用于 OpenWrt / iStoreOS 的 Cloudflare DNS 优选插件。它调用
 [XIU2/CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest) 测出较优的
