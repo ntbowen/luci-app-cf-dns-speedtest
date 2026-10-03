@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: xiaokeikei\n"
+"Language-Team: none\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Cloudflare DNS Speedtest"
+msgstr "Cloudflare DNS 优选"
+
+msgid "After a speed test, only the configured domains are resolved by a dedicated mosdns instance returning the best IP; all other DNS queries keep using the existing resolver path."
+msgstr "测速后仅将指定域名交给独立 mosdns 实例返回优选 IP；其他 DNS 查询继续使用原有链路。"
+
+msgid "Grant access to Cloudflare DNS speedtest settings"
+msgstr "授予访问 Cloudflare DNS 优选设置的权限"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Cloudflare domains"
+msgstr "Cloudflare 域名"
+
+msgid "mosdns listen port"
+msgstr "mosdns 旁路端口"
+
+msgid "Schedule"
+msgstr "定时任务"
+
+msgid "Standard cron expression. Leave empty to disable scheduled tests. Click \"Apply DNS configuration\" after saving."
+msgstr "标准 cron 表达式，留空则不定时测速。保存后请点击“应用 DNS 配置”。"
+
+msgid "Test threads"
+msgstr "测速线程"
+
+msgid "Latency probes"
+msgstr "延迟测速次数"
+
+msgid "Download tests"
+msgstr "下载测速数量"
+
+msgid "Per-test timeout (seconds)"
+msgstr "单项超时（秒）"
+
+msgid "Max latency (ms)"
+msgstr "最大延迟（毫秒）"
+
+msgid "Min speed (MB/s)"
+msgstr "最低速度（MB/s）"
+
+msgid "Test URL"
+msgstr "测速 URL"
+
+msgid "Runtime status"
+msgstr "运行状态"
+
+msgid "Idle"
+msgstr "空闲"
+
+msgid "Running"
+msgstr "运行中"
+
+msgid "Failed"
+msgstr "失败"
+
+msgid "Succeeded"
+msgstr "成功"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "No test results yet"
+msgstr "尚无测速结果"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Current best IP"
+msgstr "当前优选 IP"
+
+msgid "DNS integration"
+msgstr "DNS 应用"
+
+msgid "Enabled"
+msgstr "已启用"
+
+msgid "Disabled"
+msgstr "未启用"
+
+msgid "Last test"
+msgstr "上次测速"
+
+msgid "Active"
+msgstr "已生效"
+
+msgid "Inactive"
+msgstr "未生效"
+
+msgid "Speed test started in the background."
+msgstr "测速已在后台启动。"
+
+msgid "Run test now"
+msgstr "立即测速"
+
+msgid "Stop test"
+msgstr "停止测速"
+
+msgid "Apply DNS configuration"
+msgstr "应用 DNS 配置"
+
+msgid "Refresh status"
+msgstr "刷新状态"

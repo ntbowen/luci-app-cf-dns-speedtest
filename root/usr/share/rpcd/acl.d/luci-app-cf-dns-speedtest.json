@@ -1,6 +1,6 @@
 {
   "luci-app-cf-dns-speedtest": {
-    "description": "Cloudflare DNS speedtest configuration",
+    "description": "Grant access to Cloudflare DNS speedtest settings",
     "read": {
       "uci": [ "cf_dns_speedtest" ],
       "file": {

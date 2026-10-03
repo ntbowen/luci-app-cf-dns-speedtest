@@ -1,6 +1,6 @@
 {
   "admin/services/cf-dns-speedtest": {
-    "title": "Cloudflare DNS 优选",
+    "title": "Cloudflare DNS Speedtest",
     "order": 65,
     "action": { "type": "view", "path": "cf-dns-speedtest" },
     "depends": { "acl": [ "luci-app-cf-dns-speedtest" ] }
