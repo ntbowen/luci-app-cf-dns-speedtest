@@ -145,9 +145,8 @@ run_test() {
 	latency="$(uint "$(cfg max_latency)" 300)"; [ "$latency" -ge 1 ] && [ "$latency" -le 9999 ] || latency=300
 	speed="$(cfg min_speed)"; case "$speed" in ''|*[!0-9.]*) speed=1;; esac
 	url="$(cfg test_url)"; case "$url" in https://*|http://*) :;; *) echo failed > "$STATE/status"; log "invalid test URL"; return 1;; esac
-	cd /usr/share/$NAME || return 1
 	log "speed test started"
-	if ./cfst -f ip.txt -o "$STATE/result.csv.new" -n "$threads" -t "$probes" -dn "$count" -dt "$timeout" -tl "$latency" -sl "$speed" -p 10 -url "$url" > "$STATE/cfst.out" 2>&1; then
+	if cdnspeedtest -f /usr/share/$NAME/ip.txt -o "$STATE/result.csv.new" -n "$threads" -t "$probes" -dn "$count" -dt "$timeout" -tl "$latency" -sl "$speed" -p 10 -url "$url" > "$STATE/cfst.out" 2>&1; then
 		ip="$(awk -F, 'NR==2 {gsub(/\r/,""); print $1; exit}' "$STATE/result.csv.new")"
 		if ! valid_ipv4 "$ip"; then echo failed > "$STATE/status"; log "no valid IPv4 result"; return 1; fi
 		old_ip="$(cat "$STATE/best_ip" 2>/dev/null)"

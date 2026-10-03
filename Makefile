@@ -5,8 +5,7 @@ include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=Cloudflare DNS speed test and scoped mosdns integration
 LUCI_DESCRIPTION:=Selects a Cloudflare IPv4 address and serves it only for configured domains through an isolated local mosdns instance.
-LUCI_DEPENDS:=+luci-base +mosdns
-LUCI_PKGARCH:=x86_64
+LUCI_DEPENDS:=+luci-base +mosdns +cdnspeedtest
 LUCI_MAINTAINER:=xiaokeikei
 
 PKG_VERSION:=1.1.0
@@ -21,7 +20,7 @@ endef
 define Package/luci-app-cf-dns-speedtest/postinst
 #!/bin/sh
 [ -n "$${IPKG_INSTROOT}" ] && exit 0
-chmod 0755 /usr/bin/cf-dns-speedtest /usr/share/cf-dns-speedtest/cfst /etc/init.d/cf-dns-speedtest
+chmod 0755 /usr/bin/cf-dns-speedtest /etc/init.d/cf-dns-speedtest
 /etc/init.d/cf-dns-speedtest enable
 rm -f /tmp/luci-indexcache /tmp/luci-indexcache.* /tmp/luci-modulecache/* 2>/dev/null
 /etc/init.d/rpcd reload 2>/dev/null
